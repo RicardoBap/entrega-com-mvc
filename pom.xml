@@ -1,7 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.ricbap</groupId>
@@ -18,6 +17,13 @@
 		
 		<java.version>1.8</java.version>
 		<maven-compiler-pluging.version>3.2</maven-compiler-pluging.version>
+		
+		<!-- 5.2.13.RELEASE https://mvnrepository.com/artifact/org.springframework/spring-framework-bom " ANTERIOR 4.3.0.RELEASE" -->
+		<spring-framework.version>4.3.0.RELEASE</spring-framework.version>
+		
+		<!-- SERVLET API -->
+		<servlet.version>3.1.0</servlet.version>
+		
 	</properties>
 	
 	<build>
@@ -32,5 +38,35 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-framework-bom</artifactId>
+			    <version>${spring-framework.version}</version>
+			    <type>pom</type>
+			    <scope>import</scope>
+			</dependency>			
+		</dependencies>		
+	</dependencyManagement>
+	
+	<dependencies>
+	
+		<!-- SPRING MVC 4.3.0.RELEASE -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		
+		<!-- SERVLET API -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+	</dependencies>
 	
 </project>
