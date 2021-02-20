@@ -15,14 +15,17 @@
 		
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 		<maven-compiler-pluging.version>3.2</maven-compiler-pluging.version>
 		
 		<!-- 5.2.13.RELEASE https://mvnrepository.com/artifact/org.springframework/spring-framework-bom " ANTERIOR 4.3.0.RELEASE" -->
-		<spring-framework.version>4.3.0.RELEASE</spring-framework.version>
+		<spring-framework.version>5.2.13.RELEASE</spring-framework.version>
 		
 		<!-- SERVLET API -->
 		<servlet.version>3.1.0</servlet.version>
+		
+		<!-- THYMELEAF -->
+		<thymeleaf.version>3.0.12.RELEASE</thymeleaf.version>
 		
 	</properties>
 	
@@ -53,7 +56,7 @@
 	
 	<dependencies>
 	
-		<!-- SPRING MVC 4.3.0.RELEASE -->
+		<!-- SPRING MVC 5.2.13.RELEASE -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -66,6 +69,20 @@
 			<version>${servlet.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<!-- THYMELEAF -->
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf</artifactId>
+			<version>${thymeleaf.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring5</artifactId>
+			<version>${thymeleaf.version}</version>
+		</dependency>
+		
 		
 	</dependencies>
 	
